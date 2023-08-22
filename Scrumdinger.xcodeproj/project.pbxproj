@@ -81,9 +81,9 @@
 		744A455B2A94793A00C87294 /* Scrumdinger */ = {
 			isa = PBXGroup;
 			children = (
+				744A455C2A94793A00C87294 /* ScrumdingerApp.swift */,
 				740F92FD2A94829400911732 /* Models */,
 				740F93022A94845600911732 /* Views */,
-				744A455C2A94793A00C87294 /* ScrumdingerApp.swift */,
 				744A45602A94793B00C87294 /* Assets.xcassets */,
 				744A45622A94793B00C87294 /* Preview Content */,
 			);
