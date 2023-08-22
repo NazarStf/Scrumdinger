@@ -19,11 +19,8 @@ struct MeetingView: View {
 			RoundedRectangle(cornerRadius: 16.0)
 				.fill(scrum.theme.mainColor)
 			VStack {
-				MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed,
-								  secondsRemaining: scrumTimer.secondsRemaining,
-								  theme: scrum.theme)
-				Circle()
-					.strokeBorder(lineWidth: 24)
+				MeetingHeaderView(secondsElapsed: scrumTimer.secondsElapsed, secondsRemaining: scrumTimer.secondsRemaining, theme: scrum.theme)
+				MeetingTimerView(speakers: scrumTimer.speakers, theme: scrum.theme)
 				MeetingFooterView(speakers: scrumTimer.speakers, skipAction: scrumTimer.skipSpeaker)
 			}
 		}
@@ -48,10 +45,10 @@ struct MeetingView: View {
 	}
 	
 	private func endScrum() {
-			scrumTimer.stopScrum()
-			let newHistory = History(attendees: scrum.attendees)
-			scrum.history.insert(newHistory, at: 0)
-		}
+		scrumTimer.stopScrum()
+		let newHistory = History(attendees: scrum.attendees)
+		scrum.history.insert(newHistory, at: 0)
+	}
 }
 
 struct MeetingView_Previews: PreviewProvider {
