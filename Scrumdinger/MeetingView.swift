@@ -24,6 +24,9 @@ struct MeetingView: View {
 					Label("600", systemImage: "hourglass.bottomhalf.fill")
 				}
 			}
+			.accessibilityElement(children: .ignore)
+			.accessibilityLabel("Time remaining")
+			.accessibilityValue("10 minutes")
 			Circle()
 				.strokeBorder(lineWidth: 24)
 			HStack {
@@ -34,6 +37,7 @@ struct MeetingView: View {
 				} label: {
 					Image(systemName: "forward.fill")
 				}
+				.accessibilityLabel("Next speaker")
 			}
 		}
 		.padding()
